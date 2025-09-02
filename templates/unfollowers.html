@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UnFollowers</title>
+    <link rel="stylesheet" href="static/styles.css" />
+</head>
+
+<body>
+
+    <main class="container">
+        <div class="grid">
+            <section>
+                <hgroup>
+                    <h2>Compare Your Files</h2>
+                    <h3>Upload your HTML exports to find out who unfollowed you</h3>
+                </hgroup>
+                <form id="upload-form" class="grid">
+                    <label for="file1">Followers</label>
+                    <input type="file" id="file1" name="followers" accept=".html" />
+
+                    <label for="file2">Followings</label>
+                    <input type="file" id="file2" name="followings" accept=".html" />
+
+                    <button type="submit">Compare</button>
+                </form>
+
+                <h3>Unfollowers</h3>
+                <div id="unfollowers-output" class="file-output"></div>
+            </section>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='unfollowing.js') }}"></script>
+</body>
+
+</html>
